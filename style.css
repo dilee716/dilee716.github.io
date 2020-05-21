@@ -48,6 +48,7 @@ a {
 
 .kbbq {
   display: flex;
+  overflow: auto;
 }
 
 .kbbq .column {
