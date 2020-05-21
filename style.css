@@ -8,6 +8,7 @@ html, body {
   background: #161616;
   color: #e4e4e4;
   font-family: 'Open Sans', sans-serif;
+  flex-direction: column;
 }
 
 h1 {
@@ -17,6 +18,10 @@ h1 {
 h2 {
   margin: 0;
   width: 300px;
+}
+
+a {
+  color: white;
 }
 
 .social-links {
