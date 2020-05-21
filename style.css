@@ -23,6 +23,10 @@ a {
   color: white;
 }
 
+.wrapper {
+  margin-top: 50%;
+}
+
 .social-links {
   margin: 10px 0;
   color: white;
