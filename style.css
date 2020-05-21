@@ -45,3 +45,11 @@ a {
 .social-links a:hover {
   background-color: rgba(13, 133, 49, 0.242);
 }
+
+.kbbq {
+  display: flex;
+}
+
+.kbbq .column {
+  width: 200px;
+}
