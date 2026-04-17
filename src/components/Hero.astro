@@ -1,0 +1,17 @@
+---
+import { siteConfig } from '../site.config';
+---
+
+<section class="hero" id="top" aria-labelledby="hero-heading">
+	<div class="wrap">
+		<h1 id="hero-heading">{siteConfig.businessName}</h1>
+		<p class="lede">{siteConfig.tagline}</p>
+		<p class="lede" style="margin-top: -0.5rem">{siteConfig.intro}</p>
+		<div class="hero-actions">
+			<a class="btn btn-primary" href={siteConfig.calendlyUrl} rel="noopener noreferrer" target="_blank">{siteConfig.primaryCtaLabel}</a>
+			<a class="btn btn-secondary" href={siteConfig.youtubeChannelUrl} rel="noopener noreferrer" target="_blank"
+				>Watch on YouTube</a
+			>
+		</div>
+	</div>
+</section>

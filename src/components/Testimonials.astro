@@ -1,0 +1,45 @@
+---
+import { testimonials } from '../data/testimonials';
+
+function testimonialInitials(name: string): string {
+	const parts = name.trim().split(/\s+/).filter(Boolean);
+	if (parts.length === 0) return '?';
+	if (parts.length === 1) return parts[0].slice(0, 2).toUpperCase();
+	return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+}
+---
+
+<section id="testimonials" aria-labelledby="testimonials-heading">
+	<div class="wrap">
+		<h2 class="section-title" id="testimonials-heading">What clients say</h2>
+		<p class="section-lede">Real words from real people.</p>
+		<div class="testimonial-grid">
+			{testimonials.map((t) => (
+				<blockquote class="testimonial">
+					<div class="testimonial-body">
+						{t.photoSrc ? (
+							<img
+								class="testimonial-photo"
+								src={t.photoSrc}
+								alt={t.photoAlt ?? `Photo of ${t.name}`}
+								width="56"
+								height="56"
+								loading="lazy"
+								decoding="async"
+							/>
+						) : (
+							<div class="testimonial-photo testimonial-photo--placeholder" aria-hidden="true">
+								{testimonialInitials(t.name)}
+							</div>
+						)}
+						<p>“{t.quote}”</p>
+					</div>
+					<footer>
+						<strong>{t.name}</strong>
+						{t.role ? ` · ${t.role}` : ''}
+					</footer>
+				</blockquote>
+			))}
+		</div>
+	</div>
+</section>

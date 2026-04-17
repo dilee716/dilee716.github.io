@@ -1,0 +1,17 @@
+---
+import { siteConfig } from '../site.config';
+
+const { background } = siteConfig;
+---
+
+<section id="background" aria-labelledby="background-heading">
+	<div class="wrap">
+		<h2 class="section-title" id="background-heading">{background.heading}</h2>
+		<p class="section-lede">{background.lede}</p>
+		<div class="background-prose">
+			{background.paragraphs.map((paragraph) => (
+				<p>{paragraph}</p>
+			))}
+		</div>
+	</div>
+</section>

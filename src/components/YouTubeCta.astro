@@ -1,0 +1,66 @@
+---
+import { siteConfig } from '../site.config';
+
+const videoId = siteConfig.featuredYoutubeVideoId?.trim();
+const youtubeVideos = (siteConfig.youtubeVideos ?? []).slice(0, 3);
+---
+
+<section id="youtube" aria-labelledby="youtube-heading">
+	<div class="wrap">
+		<h2 class="section-title" id="youtube-heading">YouTube</h2>
+		<p class="section-lede">
+			Free videos on mindset, habits, and practical strategies—subscribe so you do not miss new uploads.
+		</p>
+		<div class="youtube-panel">
+			{videoId ? (
+				<div class="video-shell">
+					<iframe
+						title="Featured YouTube video"
+						src={`https://www.youtube-nocookie.com/embed/${videoId}`}
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						allowfullscreen
+						loading="lazy"
+						referrerpolicy="strict-origin-when-cross-origin"
+					/>
+				</div>
+			) : null}
+			<div>
+				<p style="margin: 0 0 1rem; color: var(--muted);">
+					Visit the channel for the full library and the latest uploads.
+				</p>
+				<a
+					class="btn btn-primary"
+					href={siteConfig.youtubeChannelUrl}
+					rel="noopener noreferrer"
+					target="_blank">Open YouTube channel</a
+				>
+			</div>
+		</div>
+		{youtubeVideos.length > 0 ? (
+			<div class="youtube-video-picks" aria-labelledby="youtube-picks-heading">
+				<h3 class="youtube-video-picks-heading" id="youtube-picks-heading">Recent picks</h3>
+				<ul class="youtube-video-picks-grid">
+					{youtubeVideos.map((v) => {
+						const href = `https://www.youtube.com/watch?v=${v.videoId}`;
+						const thumb = `https://i.ytimg.com/vi/${v.videoId}/mqdefault.jpg`;
+						return (
+							<li>
+								<a class="youtube-video-card" href={href} rel="noopener noreferrer" target="_blank">
+									<img
+										src={thumb}
+										alt=""
+										width="320"
+										height="180"
+										loading="lazy"
+										decoding="async"
+									/>
+									<span class="youtube-video-card-title">{v.title}</span>
+								</a>
+							</li>
+						);
+					})}
+				</ul>
+			</div>
+		) : null}
+	</div>
+</section>

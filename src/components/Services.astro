@@ -1,0 +1,22 @@
+---
+import { siteConfig } from '../site.config';
+---
+
+<section id="services" aria-labelledby="services-heading">
+	<div class="wrap">
+		<h2 class="section-title" id="services-heading">What changes when we work together</h2>
+		<p class="section-lede">
+			This is not about fixing you—you are not broken. It is about who you grow into once you have space to
+			think clearly, a plan you trust, and someone in your corner who holds the vision with you until it feels
+			natural to hold it yourself.
+		</p>
+		<div class="card-grid">
+			{siteConfig.services.map((s) => (
+				<article class="card">
+					<h3>{s.title}</h3>
+					<p>{s.description}</p>
+				</article>
+			))}
+		</div>
+	</div>
+</section>

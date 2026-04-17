@@ -1,0 +1,74 @@
+---
+const basePath = import.meta.env.BASE_URL.endsWith('/')
+	? import.meta.env.BASE_URL
+	: `${import.meta.env.BASE_URL}/`;
+const imageSrc = `${basePath}images/kbbq.png`;
+---
+
+<section id="kbbq-recipe" class="recipe-section" aria-label="Korean BBQ recipe">
+	<div class="wrap">
+		<details class="recipe-disclosure">
+			<summary class="recipe-summary">
+				<span class="recipe-summary-title">Korean BBQ rib eye</span>
+				<span class="recipe-summary-meta">Marinade & cook · expand for recipe</span>
+			</summary>
+			<div class="recipe-panel">
+				<img
+					class="recipe-photo"
+					src={imageSrc}
+					alt="Korean BBQ spread: glazed rib eye with carrots and onion, rice, kimchi, lettuce wraps, soju and beer on a wooden table"
+					width="200"
+					loading="lazy"
+					decoding="async"
+				/>
+				<div class="recipe-grid">
+					<div class="recipe-block">
+						<h3 class="recipe-block-title">Ingredients</h3>
+						<ul class="recipe-list">
+							<li>2 tablespoons soy sauce</li>
+							<li>2–3 cloves garlic</li>
+							<li>1 Asian or Bosc pear</li>
+							<li>1 tablespoon brown sugar</li>
+							<li>2 carrots</li>
+							<li>2 scallions</li>
+							<li>Half an onion</li>
+							<li>1.5 pounds boneless rib eye</li>
+						</ul>
+					</div>
+					<div class="recipe-block">
+						<h3 class="recipe-block-title">Prep</h3>
+						<ol class="recipe-steps">
+							<li>
+								<strong>Marinade:</strong> Puree the pear in a food processor. Mince the garlic. Mix the soy
+								sauce, pureed pear, and garlic in a bowl. Add sugar to taste. It should taste good on its
+								own: salty from soy but not too salty, sweet from pear and sugar but not too sweet, and
+								garlicky but not overpowering.
+							</li>
+							<li>
+								<strong>Veggies:</strong> Cut the carrots, scallions, and onion into thin slices (julienne
+								if you want it neater).
+							</li>
+							<li>
+								<strong>Beef:</strong> Cut into bite-sized pieces, <em>against the grain</em>, so it stays
+								less chewy.
+							</li>
+							<li>Mix everything in the bowl with two spoons or your hands.</li>
+							<li>Rest about 12 hours or overnight.</li>
+						</ol>
+					</div>
+					<div class="recipe-block">
+						<h3 class="recipe-block-title">Cook</h3>
+						<ol class="recipe-steps">
+							<li>
+								Get a pan very hot. Lay the beef in and let it sizzle. You want enough heat to caramelize
+								and get a golden crust without burning the marinade—brown glaze on each side. You will
+								know it when you see it.
+							</li>
+							<li>Serve with rice, kimchi, lettuce wraps, soju, and beer.</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</details>
+	</div>
+</section>

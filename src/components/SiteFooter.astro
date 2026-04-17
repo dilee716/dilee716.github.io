@@ -1,0 +1,19 @@
+---
+import { siteConfig } from '../site.config';
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+	<div class="wrap">
+		<p style="margin: 0 0 0.5rem;">
+			© {year} {siteConfig.businessName}. Coaching services promoted on this site.
+		</p>
+		<p style="margin: 0;">
+			<a href={siteConfig.calendlyUrl} rel="noopener noreferrer" target="_blank">Book via Calendly</a>
+			&nbsp;·&nbsp;
+			<a href={siteConfig.youtubeChannelUrl} rel="noopener noreferrer" target="_blank">YouTube</a>
+			&nbsp;·&nbsp;
+			<a href="#top">Back to top</a>
+		</p>
+	</div>
+</footer>

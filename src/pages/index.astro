@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import Hero from '../components/Hero.astro';
+import Services from '../components/Services.astro';
+import Booking from '../components/Booking.astro';
+import Testimonials from '../components/Testimonials.astro';
+import Background from '../components/Background.astro';
+import YouTubeCta from '../components/YouTubeCta.astro';
+import KbbqRecipe from '../components/KbbqRecipe.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import { siteConfig } from '../site.config';
+---
+
+<Layout title={`${siteConfig.businessName} · ${siteConfig.siteTitle}`} description={siteConfig.tagline}>
+	<SiteHeader />
+	<main id="main">
+		<Hero />
+		<Services />
+		<Booking />
+		<Testimonials />
+		<Background />
+		<YouTubeCta />
+		<KbbqRecipe />
+	</main>
+	<SiteFooter />
+</Layout>

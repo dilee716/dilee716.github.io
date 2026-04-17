@@ -1,0 +1,15 @@
+---
+import { siteConfig } from '../site.config';
+---
+
+<section id="book" aria-labelledby="book-heading">
+	<div class="wrap">
+		<h2 class="section-title" id="book-heading">Book a session</h2>
+		<p class="section-lede">Open Calendly to pick a time that works for you.</p>
+		<p>
+			<a class="btn btn-primary" href={siteConfig.calendlyUrl} rel="noopener noreferrer" target="_blank">
+				{siteConfig.primaryCtaLabel}
+			</a>
+		</p>
+	</div>
+</section>
